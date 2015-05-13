@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+	<title>单体订单录入</title>
+
+	<link href="/Public/static/datetimepicker/css/datetimepicker.css" rel="stylesheet">
+	<link href="/Public/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="/Public/static/jquery-ui/jquery-ui.css" rel="stylesheet">
+
+	<script type="text/javascript" src="/Public/static/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="/Public/static/jquery-ui/jquery-ui.js"></script>
+	<script src="/Public/static/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="/Public/static/datetimepicker/js/bootstrap-datetimepicker.js"></script>
+	<script type="text/javascript" src="/Public/static/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+
+	<script>
+  $(function() {
+     $( "#datepicker" ).datepicker();
+  });
+  </script>
+</head>
+<body>
+
+	<div class="container">
+	
+	<form class="form-horizontal" role="form">
+			<fieldset>
+
+				<legend>订单信息</legend>
+				
+			
+				<div class="form-group">
+					<label for="name" class="col-sm-2 col-xs-2 control-label">姓名</label>
+					<div class="input-group  col-sm-8 col-xs-10">
+						<input class="form-control" type="text" id="name" placeholder="请输入姓名">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="sex" class="col-sm-2 col-xs-2 control-label">性别</label>
+					<div class="input-group  col-sm-8 col-xs-10">
+						<select class="form-control">
+							<option>男</option>
+							<option>女</option>
+						</select>
+					</div>
+				</div>
+
+
+
+				<!--
+				<div class="form-group">
+					<label for="dtp_orderdate" class="col-sm-2 col-xs-2 control-label">订单日期</label>
+					<div class="input-group col-sm-8 col-xs-10 date form_datetime" data-date="2015-01-01" data-date-format="yyyy-mm-dd" data-link-field="dtp_orderdate">
+						<input class="form-control" type="text" value="" readonly>
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-remove"></span>
+						</span>
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-th"></span>
+						</span>
+					</div>
+				</div>
+
+
+
+				<div class="form-group">
+					<label for="dtp_finishdate" class="col-sm-2 col-xs-2 control-label">交货日期</label>
+					<div class="input-group col-sm-8 col-xs-10 date form_datetime" data-date="2015-01-01" data-date-format="yyyy-mm-dd" data-link-field="dtp_finishdate">
+						<input class="form-control" type="text" value="" readonly>
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-remove"></span>
+						</span>
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-th"></span>
+						</span>
+					</div>
+				</div>
+				-->
+
+				<div class="form-group">
+					<label for="dtp_orderdate" class="col-sm-2 col-xs-2 control-label">订单日期</label>
+					<div class="input-group col-sm-8 col-xs-10">
+						<input class="form-control" type="text" id="billdate" value="" readonly>
+					</div>
+				</div>
+
+
+
+				<div class="form-group">
+					<label for="dtp_finishdate" class="col-sm-2 col-xs-2 control-label">交货日期</label>
+					<div class="input-group col-sm-8 col-xs-10">
+						<input class="form-control" type="text" id="finishdate" value="" readonly>
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<label for="product_code" class="col-sm-2 col-xs-2 control-label">款号</label>
+					<div class="input-group  col-sm-8 col-xs-10">
+						<input class="form-control" type="text" id="product_code" placeholder="请输入款号">
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<label for="product_name" class="col-sm-2 col-xs-2 control-label">产品名称</label>
+					<div class="input-group  col-sm-8 col-xs-10">
+						<input class="form-control" type="text" id="product_name"  readonly>
+					</div>
+				</div>
+
+
+				<legend>量体信息</legend>
+
+				<div class="form-group">
+					<label for="sc" class="col-sm-2 col-xs-2 control-label">身长</label>
+					<div class="input-group  col-sm-8 col-xs-10">
+						<input class="form-control" type="text" id="sc" placeholder="请输入身长">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="jk" class="col-sm-2 col-xs-2 control-label">肩宽</label>
+					<div class="input-group  col-sm-8 col-xs-10">
+						<input class="form-control" type="text" id="jk" placeholder="请输入肩宽">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="xc" class="col-sm-2 col-xs-2 control-label">袖长</label>
+					<div class="input-group  col-sm-8 col-xs-10">
+						<input class="form-control" type="text" id="xc" placeholder="请输入袖长">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="xw" class="col-sm-2 col-xs-2 control-label">胸围</label>
+					<div class="input-group  col-sm-8 col-xs-10">
+						<input class="form-control" type="text" id="xw" placeholder="请输入胸围">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="yw" class="col-sm-2 col-xs-2 control-label">腰围</label>
+					<div class="input-group  col-sm-8 col-xs-10">
+						<input class="form-control" type="text" id="yw" placeholder="请输入腰围">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="tw" class="col-sm-2 col-xs-2 control-label">臀围</label>
+					<div class="input-group  col-sm-8 col-xs-10">
+						<input class="form-control" type="text" id="tw" placeholder="请输入臀围">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="kc" class="col-sm-2 col-xs-2 control-label">裤长</label>
+					<div class="input-group  col-sm-8 col-xs-10">
+						<input class="form-control" type="text" id="kc" placeholder="请输入裤长">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="lk" class="col-sm-2 col-xs-2 control-label">领口</label>
+					<div class="input-group  col-sm-8 col-xs-10">
+						<input class="form-control" type="text" id="lk" placeholder="请输入领口">
+					</div>
+				</div>
+
+
+			</fieldset>
+			<div class="form-actions col-sm-offset-3">
+				<button type="submit" class="btn btn-primary">提交</button>
+			</div>
+
+		</form>
+
+	</div>
+
+	<script type="text/javascript">
+
+  //   $('.form_datetime').datetimepicker({
+  //       language:  'zh-CN',
+  //       weekStart: 1,
+  //       todayBtn:  1,
+		// autoclose: 1,
+		// todayHighlight: 1,
+		// startView: 2,
+		// forceParse: 0,
+  //       showMeridian: 1,
+  //       minView:2,
+  //       maxView:2
+  //   });
+
+    $("#billdate,#finishdate").datepicker({
+     	dateFormat :'yy-mm-dd'
+     });
+</script>
+
+</body>
+
+</html>

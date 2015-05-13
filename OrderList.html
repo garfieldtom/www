@@ -14,6 +14,7 @@
 	<script type="text/javascript" src="/Public/static/jquery-1.11.2.js"></script>
 	<script type="text/javascript" src="/Public/static/jquery-ui/jquery-ui.js"></script>
 	<script type="text/javascript" src="/Public/static/bootstrap-table/bootstrap-table.js"></script>
+	<script type="text/javascript" src="/Public/static/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
 	
 	<script src="/Public/static/bootstrap/js/bootstrap.js"></script>
 	<script type="text/javascript" src="/Public/static/datetimepicker/js/bootstrap-datetimepicker.js"></script>
@@ -40,16 +41,17 @@
 
 	<div id="filter-bar"> </div>
 
-	<table data-toggle="table"  id="table-style" data-url="data1.json" data-height="400" data-row-style="rowStyle" data-sort-name="name" data-sort-order="desc" data-click-to-select="true" data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1"  data-pagination="true" data-show-export="true"  data-toolbar="#filter-bar" data-show-filter="false">  <!--show filter 有问题-->
+	<!--data-url="data1.json"-->
+	<table data-toggle="table"  id="table-style" data-url="http://localhost/testajax.php" data-height="400" data-row-style="rowStyle" data-sort-name="name" data-sort-order="desc" data-click-to-select="true" data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1"  data-pagination="true" data-show-export="true"  data-toolbar="#filter-bar" data-show-filter="false">  <!--show filter 有问题-->
     <thead>
     <tr>
         <th data-field="multi"  data-checkbox="true"></th>
-        <th data-field="id" data-align="right" data-sortable="true">Item ID</th>
+        <th data-field="id" data-align="right" data-sortable="true">项目ID</th>
         <th data-field="name"  data-align="right" data-sortable="true">
-            Item Name
+            项目名称
         </th>
         <th data-field="price" data-align="right" data-sortable="true">
-            Item Price
+            价格
         </th>
     </tr>
     </thead>
